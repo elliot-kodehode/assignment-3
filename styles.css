@@ -8,4 +8,77 @@ body {
   background-image: url(/images/background.jpg);
   background-repeat: repeat;
   background-size: contain;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  overflow: hidden;
+  background-color: #6c262600;
+  justify-content: flex-end;
+  padding: 14px 16px;
+}
+
+.navbar a {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav,
+#single {
+  overflow: hidden;
+}
+
+.subnav .subnavbtn,
+#single,
+#Formation {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  /* padding: 14px 16px; */
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.navbar a:hover,
+.subnav:hover .subnavbtn,
+#single:hover {
+  text-decoration: underline red 2px;
+  line-height: 10px;
+}
+
+.subnav-content {
+  visibility: hidden;
+  position: absolute;
+  background-color: rgba(139, 0, 0, 0);
+  /* width: 100%; */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+}
+
+.subnav-content a {
+  /* float: right; */
+  flex-direction: column;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  visibility: visible;
 }
