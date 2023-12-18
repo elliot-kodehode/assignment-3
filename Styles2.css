@@ -1,0 +1,31 @@
+/* section 2 - Formation */
+/* to do: font, responsive, colors, images, flex, size */
+.h2v {
+  color: aliceblue;
+  padding: 10px;
+}
+
+.text-section {
+  border-radius: 40px;
+  margin: 40px;
+  padding: 10px;
+  max-width: auto;
+  height: 600px;
+  background-color: rgba(150, 10, 10, 0.5);
+}
+
+.paragraphs {
+  margin: 10px;
+
+  color: aliceblue;
+}
+
+/* formation image */
+
+#Formation-img {
+  width: 200px;
+  height: 400px;
+  background-image: url(images/Formation.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
