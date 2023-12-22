@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "strait", sans serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* display: flex; */
   /* min-height: 500vh; */
