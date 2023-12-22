@@ -2,11 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "strait", sans serif;
 }
 body {
   display: flex;
   min-height: 500vh;
-  background-image: url(/images/background.jpg);
+  background-image: url(images/background.jpg);
   background-attachment: fixed;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
@@ -94,49 +95,79 @@ nav a:hover,
   width: 100vw;
   height: 100vh;
   padding-top: 36px;
-  /* remove when done */
-  background-color: rgba(250, 235, 215, 0.153);
-  align-items: center;
-  justify-content: center;
+  /* background-color: rgba(250, 235, 215, 0.153); */
 }
 
 @keyframes Floaty {
   0% {
-    top: 0px;
+    margin-top: 0px;
   }
   25% {
-    top: 5px;
+    margin-top: 5px;
   }
 
   50% {
-    top: 0px;
+    margin-top: 0px;
   }
   75% {
-    top: -5px;
+    margin-top: -5px;
   }
   100% {
-    top: 0px;
+    margin-top: 0px;
   }
 }
 
 .Jupiter {
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 17vh;
+  right: 30vw;
+  align-self: center;
+  justify-self: center;
   background-image: url(images/Jupiter.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   align-items: center;
+  content-visibility: hidden;
   width: 35vw;
   height: 35vw;
   margin: auto;
-  animation: Floaty 3s linear infinite;
+  animation: Floaty 4s linear infinite;
+  z-index: 1;
 }
 
+
 .Jupiter:hover {
-  transition: 100ms ease-in-out;
+  transition: 300ms ease-in-out;
   transform: scale(1.1);
   animation: none;
+  content-visibility: visible;
+  z-index: 2;
+}
+
+.Io{
+  position: absolute;
+  top: 18vh;
+  right: 32vw;
+  background-image: url(images/io_transparent.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+  content-visibility: hidden;
+  width: 7vw;
+  height: 7vw;
+  animation: Floaty 4s infinite linear 1s;
+  z-index: 1;
+}
+
+.Io:hover {
+  transition: 300ms ease-in-out;
+  transform: scale(1.1);
+  animation: none;
+  content-visibility: visible;
+  z-index: 2;
 }
 
 Dialog {
@@ -149,6 +180,10 @@ Dialog {
   border: 2px solid black;
   background-color: rgba(37, 37, 37, 0.936);
 }
+
+.Io Dialog {width: 400%;
+margin-left: -150%;
+margin-top: 100%}
 
 h3 {
   font-size: 46px;
@@ -182,6 +217,7 @@ h3 {
   cursor: pointer;
 }
 
-.Text-symbol {
+.Text-Symbol {
   color: white;
+  width: 40px;
 }
